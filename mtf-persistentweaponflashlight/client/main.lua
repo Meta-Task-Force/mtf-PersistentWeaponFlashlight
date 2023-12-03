@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
         for k,v in pairs(Config.Weapons) do
             if currentWeapon == k then
                 if DoesEntityExist(ped) and not IsEntityDead(ped) and HasPedGotWeaponComponent(ped, currentWeapon, v) then
-                    if IsControlJustPressed(0, Config.KeyBind) then
+                    if IsControlJustPressed(0, Config.Keybind) then
                         flashlightActive = not flashlightActive
                         TriggerEvent("mtf-persistentweapon:client:ToggleFlashlight", ped, flashlightActive)
                     end
